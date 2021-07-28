@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap')
+
+$dark_font: #000
+$light_font: #fff
+$hover_font: #9D8665
+$red_color: #710707
+$dark_color: #030303
+$roboto_font: 'Roboto'
+$forum_font: 'Forum'
+
+@mixin white_headres
+    margin: 0
+    font-family: $forum_font
+    font-size: 80px
+    letter-spacing: 5px
+    text-transform: uppercase
+    color: $light_font
+    
+@mixin gold_headres
+    margin: 0
+    font-family: $forum_font
+    font-size: 80px
+    letter-spacing: 5px
+    text-transform: uppercase
+    color: $hover_font
+
+html
+    scroll-behavior: smooth
+    
+*
+    box-sizing: border-box
+    font-weight: 400
+
+.container
+    max-width: 1440px
+    margin: 0 auto
+
+.section
+    padding: 75px 0px
+
+.section_dark
+    background-color: $dark_color
+
+.header
+    background-color: #030303
+    height: 200px
+    padding: 75px 0px
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 50px
+    &__logo
+        display: flex
+        width: 195px        
+        img
+            display: block
+            width: 50px
+            margin-right: 20px
+        h1
+            font-family: $forum_font
+            font-size: 28px
+            color: $light_font
+            text-transform: uppercase
+            letter-spacing: 5px        
+    nav
+        max-width: 720px
+        .menu
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin: 0
+            padding: 0
+            list-style: none
+            &__item
+                padding: 0 35px 0 41px
+                &:nth-child(1)
+                    padding-left: 0
+                    margin: 0
+                &:last-child
+                    padding-right: 0
+                    margin: 0                  
+                a
+                    font-family: $roboto_font
+                    font-weight: 200
+                    font-size: 22px
+                    line-height: 50px
+                    text-decoration: none
+                    color: $light_font
+                    letter-spacing: 2px
+                    text-align: center
+                    transition: 0.5s color
+                    &:hover
+                        color: $hover_font
+                    
+main
+    .welcome
+        padding-top: 115px
+        height: 750px
+        position: relative
+        z-index: 1
+        &__title
+            @include white_headres
+            margin-bottom: 26px
+        &__descr
+            margin-bottom: 76px
+            font-family: $roboto_font
+            font-weight: 200
+            font-size: 28px
+            letter-spacing: 2px
+            color: $light_font
+        &__btn
+            width: 360px
+            height: 75px
+            font-family: $roboto_font
+            font-weight: 200
+            font-size: 20px
+            letter-spacing: 3px
+            color: $light_font
+            background-color: #710707
+            border-radius: 10px
+            border: none
+            outline: none            
+            transition: 0.5s all
+            &:hover
+                background-color: #9D8665
+        &__background
+            position: absolute
+            bottom:  0px
+            right: 0px
+            z-index: -1
+    .visiting
+        height: 1265px        
+        &__title
+            @include gold_headres
+            margin-bottom: 25px
+        .cards
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            .card
+                display: block
+                height: 420px
+                width: 440px
+                margin-bottom: 75px
+                img
+                    display: block
+                    width: 440px
+                    height: 285px
+                    margin-bottom: 25px
+                &__title
+                    margin: 0
+                    font-family: $forum_font
+                    font-size: 32px
+                    letter-spacing: 5px
+                    text-transform: uppercase
+                &__descr
+                    margin: 0
+                    font-family: $roboto_font
+                    font-weight: 200
+                    font-size: 22px
+                    span
+                        font-weight: 200
+                        font-size: 18px
+    .explore
+        height: 865px
+        position: relative
+        .container
+            display: flex
+            justify-content: space-between
+            h3
+                @include white_headres
+                margin-bottom: 103px
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 190px
+                    display: block
+                    height: 3px
+                    width: 660px
+                    background-color: $red_color
+            p
+                font-family: $roboto_font
+                width: 660px
+                font-weight: 300
+                font-size: 22px
+                line-height: 38px
+                color: #fff
+                span
+                    color: $hover_font
+
+
+
+.divider_big
+    display: block
+    height: 3px
+    width: 100%
+    background-color: $red_color
+    margin-bottom: 75px
+
+.divider_small
+    display: block
+    margin: 10px 0px
+    height: 3px
+    width: 300px
+    background-color: $red_color   

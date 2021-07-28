@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 75px 0px;
+}
+
+.section_dark {
+  background-color: #030303;
+}
+
+.header {
+  background-color: #030303;
+  height: 200px;
+  padding: 75px 0px;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 195px;
+}
+
+.header__logo img {
+  display: block;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.header__logo h1 {
+  font-family: "Forum";
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.header nav {
+  max-width: 720px;
+}
+
+.header nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header nav .menu__item {
+  padding: 0 35px 0 41px;
+}
+
+.header nav .menu__item:nth-child(1) {
+  padding-left: 0;
+  margin: 0;
+}
+
+.header nav .menu__item:last-child {
+  padding-right: 0;
+  margin: 0;
+}
+
+.header nav .menu__item a {
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 50px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  -webkit-transition: 0.5s color;
+  transition: 0.5s color;
+}
+
+.header nav .menu__item a:hover {
+  color: #9D8665;
+}
+
+main .welcome {
+  padding-top: 115px;
+  height: 750px;
+  position: relative;
+  z-index: 1;
+}
+
+main .welcome__title {
+  margin: 0;
+  font-family: "Forum";
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 26px;
+}
+
+main .welcome__descr {
+  margin-bottom: 76px;
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+main .welcome__btn {
+  width: 360px;
+  height: 75px;
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #fff;
+  background-color: #710707;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+main .welcome__btn:hover {
+  background-color: #9D8665;
+}
+
+main .welcome__background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+main .visiting {
+  height: 1265px;
+}
+
+main .visiting__title {
+  margin: 0;
+  font-family: "Forum";
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #9D8665;
+  margin-bottom: 25px;
+}
+
+main .visiting .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .visiting .cards .card {
+  display: block;
+  height: 420px;
+  width: 440px;
+  margin-bottom: 75px;
+}
+
+main .visiting .cards .card img {
+  display: block;
+  width: 440px;
+  height: 285px;
+  margin-bottom: 25px;
+}
+
+main .visiting .cards .card__title {
+  margin: 0;
+  font-family: "Forum";
+  font-size: 32px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+main .visiting .cards .card__descr {
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 22px;
+}
+
+main .visiting .cards .card__descr span {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+main .explore {
+  height: 865px;
+  position: relative;
+}
+
+main .explore .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .explore .container h3 {
+  margin: 0;
+  font-family: "Forum";
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 103px;
+}
+
+main .explore .container h3::after {
+  content: '';
+  position: absolute;
+  top: 190px;
+  display: block;
+  height: 3px;
+  width: 660px;
+  background-color: #710707;
+}
+
+main .explore .container p {
+  font-family: "Roboto";
+  width: 660px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #fff;
+}
+
+main .explore .container p span {
+  color: #9D8665;
+}
+
+.divider_big {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #710707;
+  margin-bottom: 75px;
+}
+
+.divider_small {
+  display: block;
+  margin: 10px 0px;
+  height: 3px;
+  width: 300px;
+  background-color: #710707;
+}
+/*# sourceMappingURL=style.css.map */
