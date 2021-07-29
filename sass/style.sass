@@ -116,11 +116,15 @@ html
 main
     .welcome
         padding-top: 115px
-        height: 750px
-        .container
-            position: relative
+        height: 750px      
+        &__container
             height: 100%
-            z-index: 1
+            background: url("../assets/img/background.jpg") no-repeat
+            background-position: right bottom
+            .container
+                position: relative
+                height: 100%
+                z-index: 1
         &__title
             @include white_headres
             margin-bottom: 26px
@@ -146,11 +150,6 @@ main
             transition: 0.5s all
             &:hover
                 background-color: #9D8665
-        &__background
-            position: absolute
-            bottom:  0px
-            right: -230px
-            z-index: -1
     .visiting
         min-height: 1265px        
         &__title
@@ -214,6 +213,7 @@ main
         &__bg
             img
                 display: block
+                min-width: 720px
                 margin-top: 15px
     .video
         min-height: 1010px
@@ -308,7 +308,7 @@ main
                     font-weight: 300
                     font-size: 22px
                     color: #fff
-                    // padding-left: 20px
+                    cursor: pointer
                     &::before
                         content
                     input
@@ -335,3 +335,9 @@ main
     width: 25px;
     background-color: #eee;
     border-radius: 50%;
+
+@media (max-width: 1439px)
+    .explore
+        .container
+            flex-direction: column
+            align-items: center
