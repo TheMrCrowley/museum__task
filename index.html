@@ -38,7 +38,7 @@
                 </div>
                 <button class="welcome__btn">Discover the Louvre</button>
                 <img src="assets/img/background.jpg" alt="background" class="welcome__background">
-            </div>
+            </div>  
         </section>    
         <section class="visiting section" id="visiting">
             <div class="container">
@@ -163,8 +163,50 @@
                 </div>
             </div>
         </section>
-        <section class="tickets" id="tickets">
+        <section class="tickets section_dark section" id="tickets">
             <div class="container">
+                <h2 class="tickets__title">
+                    Buy tickets
+                </h2>
+                <div class="divider_big"></div>                
+                <div class="tickets-content">
+                    <img src="assets/img/tickets_bg.jpg" alt="tickets_bg">
+                    <div class="tickets-content__type">
+                        <h4>Ticket Type</h4>
+                        <label for="choise1">
+                            <span class="checkmark"></span>
+                            <input type="radio" name="type" id="choise1"
+                        value="Permanent">
+                            Permanent exhibition
+                            
+                        </label>
+                        <label for="choise2">
+                            <input type="radio" name="type" id="choise2"
+                            value="Temporary">
+                            Temporary exhibition
+                        </label>                        
+                        <label for="choise3">
+                            <input type="radio" name="type" id="choise3"
+                        value="Combined">
+                            Combined Admission
+                        </label>                        
+                    </div>
+                    <div class="tickets-content__amount">
+                        <h4>Amount</h4>
+                        <div class="basic">
+                            <div class="title">Basic 18+</div>
+                            <button class="minus">-</button>
+                            <input type="number">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="senior">
+                            <div class="title">Senior 65+</div>
+                            <button class="minus">-</button>
+                            <input type="number">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
