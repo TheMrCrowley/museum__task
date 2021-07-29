@@ -25,6 +25,25 @@ $forum_font: 'Forum'
     text-transform: uppercase
     color: $hover_font
 
+@mixin bar
+    background: linear-gradient(to right, #24809E 0%, #24809E 50%, #fff 40%, #fff 100%)
+    height: 8px
+    outline: none
+    transition: background 450ms ease-in
+    -webkit-appearance: none
+
+@mixin bar-slider
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    -webkit-appearance: none
+    cursor: ew-resize
+    background-color: #fff
+    transition: 0.5s background-color
+    &:hover
+        cursor: pointer
+        background-color: #989898
+
 html
     scroll-behavior: smooth
     
@@ -34,6 +53,7 @@ html
 
 .container
     max-width: 1440px
+    // padding: 0 20px
     margin: 0 auto
 
 .section
@@ -115,8 +135,8 @@ main
             height: 75px
             font-family: $roboto_font
             font-weight: 200
-            font-size: 20px
-            letter-spacing: 3px
+            font-size: 22px
+            letter-spacing: 2px
             color: $light_font
             background-color: #710707
             border-radius: 10px
@@ -131,7 +151,7 @@ main
             right: 0px
             z-index: -1
     .visiting
-        height: 1265px        
+        min-height: 1265px        
         &__title
             @include gold_headres
             margin-bottom: 25px
@@ -164,11 +184,12 @@ main
                         font-weight: 200
                         font-size: 18px
     .explore
-        height: 865px
+        min-height: 865px
         position: relative
         .container
             display: flex
             justify-content: space-between
+        &__descr
             h3
                 @include white_headres
                 margin-bottom: 103px
@@ -189,8 +210,109 @@ main
                 color: #fff
                 span
                     color: $hover_font
-
-
+        &__bg
+            img
+                display: block
+                margin-top: 15px
+    .video
+        min-height: 1010px
+        padding: 90px 0px  205px 0px
+        &__player
+            display: flex
+            justify-content: center
+            align-items: center
+            max-width: 100%
+            height: 630px
+            background: center / contain url("../assets/img/video.jpg") no-repeat
+            .play
+                margin: 0
+                padding: 0
+                border: none
+                outline: none
+                background-color: rgba(0,0,0,0);
+                transition: 0.5s opacity
+                &:hover
+                    opacity: 0.8
+        &__panel
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            height: 85px
+            padding: 25px 41px 24px 41px
+            background-color: #030303
+            margin-bottom: 40px
+            .control
+                display: flex
+                justify-content: space-between
+                align-items: center
+                width: 160px
+            .rewind-bar
+                @include bar
+                width: 820px
+                &::-webkit-slider-thumb 
+                    @include bar-slider
+            .sound                
+                display: flex
+                justify-content: space-between
+                align-items: center
+                align-items: center
+                width: 215px
+                &__bar
+                    @include bar
+                    width: 155px
+                    &::-webkit-slider-thumb
+                        @include bar-slider
+                &__btn
+                    // position: relative
+                    // &::before
+                    //     content: ''
+                    //     position: absolute
+                    //     left: 19px
+                    //     top: -10px
+                    //     width: 2px
+                    //     height: 50px
+                    //     display: none;
+                    //     background-color: #fff
+                    //     transform-origin: center
+                    //     transform: rotate(-45deg)
+                    // &::after
+                    //     content: ''
+                    //     position: absolute
+                    //     right: 19px
+                    //     top: -10px
+                    //     width: 2px
+                    //     height: 50px
+                    //     display: none
+                    //     background-color: #fff
+                    //     transform-origin: center
+                    //     transform: rotate(45deg)
+                    // &:active
+                    //     &::after,
+                    //     &::before
+                    //         display: block          
+            button
+                margin: 0
+                padding: 0
+                border: none
+                outline: none
+                max-width: 100% 
+                background-color: #ffffff00
+                cursor: pointer
+                transition: 0.5s opacity
+                &:hover
+                    opacity: 0.8
+        &__descr
+            display: flex
+            justify-content: space-between
+            .title
+                @include gold_headres
+            .text
+                font-family: $roboto_font  
+                max-width: 720px
+                font-weight: 300
+                font-size: 22px
+                line-height: 38px           
 
 .divider_big
     display: block
@@ -204,4 +326,4 @@ main
     margin: 10px 0px
     height: 3px
     width: 300px
-    background-color: $red_color   
+    background-color: $red_color
