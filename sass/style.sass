@@ -16,7 +16,7 @@ $forum_font: 'Forum'
     letter-spacing: 5px
     text-transform: uppercase
     color: $light_font
-    
+
 @mixin gold_headres
     margin: 0
     font-family: $forum_font
@@ -46,7 +46,7 @@ $forum_font: 'Forum'
 
 html
     scroll-behavior: smooth
-    
+
 *
     box-sizing: border-box
     font-weight: 400
@@ -72,7 +72,7 @@ html
         height: 50px
     &__logo
         display: flex
-        width: 195px        
+        width: 195px
         img
             display: block
             width: 50px
@@ -82,7 +82,7 @@ html
             font-size: 28px
             color: $light_font
             text-transform: uppercase
-            letter-spacing: 5px        
+            letter-spacing: 5px
     nav
         max-width: 720px
         .menu
@@ -99,7 +99,7 @@ html
                     margin: 0
                 &:last-child
                     padding-right: 0
-                    margin: 0                  
+                    margin: 0
                 a
                     font-family: $roboto_font
                     font-weight: 200
@@ -112,11 +112,11 @@ html
                     transition: 0.5s color
                     &:hover
                         color: $hover_font
-                    
+
 main
     .welcome
         padding-top: 115px
-        height: 750px      
+        height: 750px
         &__container
             height: 100%
             background: url("../assets/img/background.jpg") no-repeat
@@ -146,12 +146,12 @@ main
             background-color: #710707
             border-radius: 10px
             border: none
-            outline: none            
+            outline: none
             transition: 0.5s all
             &:hover
                 background-color: #9D8665
     .visiting
-        min-height: 1265px        
+        min-height: 1265px
         &__title
             @include gold_headres
             margin-bottom: 25px
@@ -230,7 +230,7 @@ main
                 padding: 0
                 border: none
                 outline: none
-                background-color: rgba(0,0,0,0);
+                background-color: rgba(0,0,0,0)
                 transition: 0.5s opacity
                 &:hover
                     opacity: 0.8
@@ -251,9 +251,9 @@ main
             .rewind-bar
                 @include bar
                 width: 820px
-                &::-webkit-slider-thumb 
+                &::-webkit-slider-thumb
                     @include bar-slider
-            .sound                
+            .sound
                 display: flex
                 justify-content: space-between
                 align-items: center
@@ -263,13 +263,13 @@ main
                     @include bar
                     width: 155px
                     &::-webkit-slider-thumb
-                        @include bar-slider        
+                        @include bar-slider
             button
                 margin: 0
                 padding: 0
                 border: none
                 outline: none
-                max-width: 100% 
+                max-width: 100%
                 background-color: #ffffff00
                 cursor: pointer
                 transition: 0.5s opacity
@@ -281,11 +281,11 @@ main
             .title
                 @include gold_headres
             .text
-                font-family: $roboto_font  
+                font-family: $roboto_font
                 max-width: 720px
                 font-weight: 300
                 font-size: 22px
-                line-height: 38px           
+                line-height: 38px
     .tickets
         min-height: 890px
         &__title
@@ -293,28 +293,118 @@ main
             margin-bottom: 25px
         &-content
             display: flex
+            font-family: $roboto_font
+            color: #fff
             img
                 padding-right: 60px
+            .flex-container
+                display: flex
+                justify-content: space-between
+                width: 50%
+            h4                
+                font-family: $roboto_font 
+                font-weight: bold
+                font-size: 28px
+                line-height: 33px
+                color: #fff
             &__type
                 display: flex
-                flex-direction: column
-                font-family: $roboto_font
-                h4
-                    font-weight: bold
-                    font-size: 28px
-                    line-height: 33px
-                    color: #fff
-                label        
-                    font-weight: 300
-                    font-size: 22px
-                    color: #fff
+                flex-direction: column             
+                .container 
+                    display: block
+                    position: relative
+                    padding-left: 40px
+                    margin: 0
+                    margin-bottom: 50px
                     cursor: pointer
-                    &::before
-                        content
-                    input
+                    font-family: $roboto_font
+                    font-weight: 300                    
+                    font-size: 22px
+                    line-height: 26px
+                    color: #fff
+                    input 
                         position: absolute
                         opacity: 0
-            
+                        cursor: pointer
+                        &:checked ~ .checkmark:after 
+                            display: block
+                    .checkmark 
+                        position: absolute
+                        top: 5px
+                        left: 0
+                        height: 17px
+                        width: 17px
+                        border: 2px solid #fff
+                        border-radius: 50%
+                        &::after
+                            content: ""
+                            position: absolute
+                            display: none
+                            top: 3px
+                            left: 3px
+                            width: 7px
+                            height: 7px
+                            border-radius: 50%
+                            background: white
+            &__amount
+                display: flex
+                flex-direction: column
+                align-items: flex-end                
+                font-size: 22px
+                font-weight: 300   
+                color: #fff
+                margin-bottom: 50px
+                h4
+                    text-align: right
+                .title
+                    align-self: flex-start
+                    margin-left: 25px
+                    margin-bottom: 15px
+                    font-weight: 300                
+                .basic
+                    margin-bottom: 25px
+                .senior
+                    margin-bottom: 50px
+                .basic, .senior
+                    display: flex
+                    justify-content: space-between
+                    width: 150px
+                    border: 3px solid #fff
+                    .number
+                        all: unset
+                        width: 30%
+                        text-align: center                    
+                        font-weight: 300
+                        font-size: 22px
+                        line-height: 26px
+                    button
+                        width: 44px
+                        height: 44px 
+                        font-size: 32px
+                        line-height: 37px
+                        text-align: center
+                        color: #fff
+                        border: none
+                        outline: none
+                        background-color: #030303
+                .total
+                    font-size: 28px
+                    font-weight: bold
+                    letter-spacing: 1.5px
+                    margin-bottom: 50px
+                .buy-btn
+                    border: none
+                    outline: none
+                    width: 175px
+                    height: 50px
+                    letter-spacing: 2px
+                    transition: 0.5s background-color
+                    &:hover
+                        background-color: #9D8665
+
+                
+                    
+
 .divider_big
     display: block
     height: 3px
@@ -328,13 +418,6 @@ main
     height: 3px
     width: 300px
     background-color: $red_color
-
-.checkmark
-    display: inline-block
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
 
 @media (max-width: 1439px)
     .explore

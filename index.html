@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Museum</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -26,7 +28,7 @@
             </nav>
         </div>
     </header>
-    <main>        
+    <main>
         <section class="section_dark welcome">
             <div class="welcome__container">
                 <div class="container">
@@ -40,7 +42,7 @@
                     <button class="welcome__btn">Discover the Louvre</button>
                 </div>
             </div>
-        </section>    
+        </section>
         <section class="visiting section" id="visiting">
             <div class="container">
                 <h2 class="visiting__title">
@@ -115,10 +117,12 @@
                         Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.
                     </p>
                     <p>
-                        It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.
+                        It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since
+                        the previous restoration in the 19th century.
                     </p>
                     <p>
-                        The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.
+                        The cleaning provoked furious protests, not because the picture had been damaged in any way, but
+                        because it looked different.
                     </p>
                 </div>
                 <div class="explore__bg">
@@ -159,7 +163,8 @@
                 <div class="video__descr">
                     <h2 class="title">Video journey</h2>
                     <p class="text">
-                        Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+                        Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona
+                        Lisa or Hammurabi's Code
                     </p>
                 </div>
             </div>
@@ -169,46 +174,49 @@
                 <h2 class="tickets__title">
                     Buy tickets
                 </h2>
-                <div class="divider_big"></div>                
+                <div class="divider_big"></div>
                 <div class="tickets-content">
                     <img src="assets/img/tickets_bg.jpg" alt="tickets_bg">
-                    <div class="tickets-content__type">
-                        <h4>Ticket Type</h4>
-                        <label for="choise1">
-                            <span class="checkmark"></span>
-                            <input type="radio" name="type" id="choise1"
-                        value="Permanent">
-                            Permanent exhibition
-                            
-                        </label>
-                        <label for="choise2">
-                            <input type="radio" name="type" id="choise2"
-                            value="Temporary">
-                            Temporary exhibition
-                        </label>                        
-                        <label for="choise3">
-                            <input type="radio" name="type" id="choise3"
-                        value="Combined">
-                            Combined Admission
-                        </label>                        
-                    </div>
-                    <div class="tickets-content__amount">
-                        <h4>Amount</h4>
-                        <div class="basic">
-                            <div class="title">Basic 18+</div>
-                            <button class="minus">-</button>
-                            <input type="number">
-                            <button class="plus">+</button>
+                    <div class="flex-container">
+                        <div class="tickets-content__type">
+                            <h4>Ticket Type</h4>
+                            <label class="container">Permanent exhibition
+                                <input type="radio" name="radio" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Temporary exhibition
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Combined Admission
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
-                        <div class="senior">
+                        <div class="tickets-content__amount">
+                            <h4>Amount</h4>
+                            <div class="title">Basic 18+</div>
+                            <div class="basic">                            
+                                <button class="minus">-</button>
+                                <input type="number" class="number" min="0" value="1">
+                                <button class="plus">+</button>
+                            </div>
                             <div class="title">Senior 65+</div>
-                            <button class="minus">-</button>
-                            <input type="number">
-                            <button class="plus">+</button>
+                            <div class="senior">                            
+                                <button class="minus">-</button>
+                                <input type="number" class="number" min="0" value="1">
+                                <button class="plus">+</button>
+                            </div>
+                            <div class="total">
+                                Total €220
+                            </div>
+                            <button class="buy-btn">
+                                Buy Now
+                            </button>
                         </div>
                     </div>
                 </div>
-
+                
             </div>
         </section>
         <section class="contacts" id="contacts">

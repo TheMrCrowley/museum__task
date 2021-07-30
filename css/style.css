@@ -473,10 +473,30 @@ main .tickets-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Roboto";
+  color: #fff;
 }
 
 main .tickets-content img {
   padding-right: 60px;
+}
+
+main .tickets-content .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+main .tickets-content h4 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #fff;
 }
 
 main .tickets-content__type {
@@ -487,26 +507,142 @@ main .tickets-content__type {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main .tickets-content__type .container {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin: 0;
+  margin-bottom: 50px;
+  cursor: pointer;
   font-family: "Roboto";
-}
-
-main .tickets-content__type h4 {
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 33px;
-  color: #fff;
-}
-
-main .tickets-content__type label {
   font-weight: 300;
   font-size: 22px;
+  line-height: 26px;
   color: #fff;
+}
+
+main .tickets-content__type .container input {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
 }
 
-main .tickets-content__type label input {
+main .tickets-content__type .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+main .tickets-content__type .container .checkmark {
   position: absolute;
-  opacity: 0;
+  top: 5px;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+main .tickets-content__type .container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+
+main .tickets-content__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+main .tickets-content__amount h4 {
+  text-align: right;
+}
+
+main .tickets-content__amount .title {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+main .tickets-content__amount .basic {
+  margin-bottom: 25px;
+}
+
+main .tickets-content__amount .senior {
+  margin-bottom: 50px;
+}
+
+main .tickets-content__amount .basic, main .tickets-content__amount .senior {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
+  border: 3px solid #fff;
+}
+
+main .tickets-content__amount .basic .number, main .tickets-content__amount .senior .number {
+  all: unset;
+  width: 30%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+main .tickets-content__amount .basic button, main .tickets-content__amount .senior button {
+  width: 44px;
+  height: 44px;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: #030303;
+}
+
+main .tickets-content__amount .total {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 50px;
+}
+
+main .tickets-content__amount .buy-btn {
+  border: none;
+  outline: none;
+  width: 175px;
+  height: 50px;
+  letter-spacing: 2px;
+  -webkit-transition: 0.5s background-color;
+  transition: 0.5s background-color;
+}
+
+main .tickets-content__amount .buy-btn:hover {
+  background-color: #9D8665;
 }
 
 .divider_big {
@@ -523,14 +659,6 @@ main .tickets-content__type label input {
   height: 3px;
   width: 300px;
   background-color: #710707;
-}
-
-.checkmark {
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
 }
 
 @media (max-width: 1439px) {
