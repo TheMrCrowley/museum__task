@@ -25,7 +25,7 @@ html {
 
 .header {
   background-color: #030303;
-  height: 200px;
+  min-height: 200px;
   padding: 75px 0px;
 }
 
@@ -690,6 +690,144 @@ main .contacts__content .descr .contact__item {
 
 main .contacts__content .descr img {
   display: block;
+}
+
+.footer {
+  min-height: 300px;
+  background-color: #030303;
+  padding: 75px 0px;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 195px;
+  margin-right: 145px;
+}
+
+.footer__logo img {
+  display: block;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.footer__logo h1 {
+  font-family: "Forum";
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer__menu nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 370px;
+  max-height: 150px;
+}
+
+.footer__menu nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-right: 150px;
+  list-style: none;
+}
+
+.footer__menu nav a {
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 50px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  -webkit-transition: 0.5s color;
+  transition: 0.5s color;
+}
+
+.footer__menu nav a:hover {
+  color: #9D8665;
+}
+
+.footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer .social__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 48px;
+  width: 48px;
+  margin-right: 25px;
+  border: 1px solid #666666;
+  border-radius: 50%;
+  -webkit-transition: 0.5 all;
+  transition: 0.5 all;
+}
+
+.footer .social__item svg {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.footer .social__item:hover {
+  border: 1px solid #9D8665;
+}
+
+.footer .social__item:hover svg {
+  fill: #9D8665;
 }
 
 .divider_big {
