@@ -645,6 +645,53 @@ main .tickets-content__amount .buy-btn:hover {
   background-color: #9D8665;
 }
 
+main .contacts {
+  min-height: 960px;
+}
+
+main .contacts__title {
+  margin: 0;
+  font-family: "Forum";
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #9D8665;
+  margin-bottom: 25px;
+}
+
+main .contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Roboto";
+}
+
+main .contacts__content .descr h4 {
+  margin: 0;
+  margin-bottom: 35px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+main .contacts__content .descr .contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main .contacts__content .descr .contact__item {
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+main .contacts__content .descr img {
+  display: block;
+}
+
 .divider_big {
   display: block;
   height: 3px;

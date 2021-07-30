@@ -197,15 +197,15 @@
                             <h4>Amount</h4>
                             <div class="title">Basic 18+</div>
                             <div class="basic">                            
-                                <button class="minus">-</button>
+                                <button class="minus" onclick="this.nextElementSibling.stepDown()">-</button>
                                 <input type="number" class="number" min="0" value="1">
-                                <button class="plus">+</button>
+                                <button class="plus" onclick="this.previousElementSibling.stepUp()">+</button>
                             </div>
                             <div class="title">Senior 65+</div>
                             <div class="senior">                            
-                                <button class="minus">-</button>
+                                <button class="minus" onclick="this.nextElementSibling.stepDown()">-</button>
                                 <input type="number" class="number" min="0" value="1">
-                                <button class="plus">+</button>
+                                <button class="plus" onclick="this.previousElementSibling.stepUp()">+</button>
                             </div>
                             <div class="total">
                                 Total €220
@@ -219,9 +219,30 @@
                 
             </div>
         </section>
-        <section class="contacts" id="contacts">
+        <section class="contacts section" id="contacts">
             <div class="container">
-
+                <h2 class="contacts__title">Contacts</h2>
+                <div class="divider_big"></div>
+                <div class="contacts__content">
+                    <div class="descr">
+                        <h4>
+                            Palais Royal <br>
+                            Musee du Louvre
+                        </h4>
+                        <ul class="contact">
+                            <li class="contact__item">
+                                address: 75001 Paris, France
+                            </li>
+                            <li class="contact__item">
+                                phone: +33(0) 1 40 20 50 50
+                            </li>
+                            <li class="contact__item">
+                                mail: info@louvre.fr
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="assets/img/map.png" alt="map">
+                </div>
             </div>
         </section>
     </main>
