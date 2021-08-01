@@ -121,6 +121,8 @@ main
         padding-top: 115px
         height: 750px
         &__container
+            width: 1920px
+            margin: 0 auto
             height: 100%
             background: url("../assets/img/background.jpg") no-repeat
             background-position: right bottom
@@ -130,6 +132,7 @@ main
                 z-index: 1
         &__title
             @include white_headres
+            line-height: 90px
             margin-bottom: 26px
         &__descr
             margin-bottom: 76px
@@ -167,6 +170,10 @@ main
                 height: 420px
                 width: 440px
                 margin-bottom: 75px
+                &:hover
+                    .divider_small
+                        background-color: $red_color
+                        width: 300px
                 img
                     display: block
                     width: 440px
@@ -390,6 +397,10 @@ main
                         border: none
                         outline: none
                         background-color: #030303
+                        transition: 0.2s background-color
+                        cursor: pointer
+                        &:active
+                            background-color: #9D8665
                 .total
                     font-size: 28px
                     font-weight: bold
@@ -501,11 +512,11 @@ main
     margin-bottom: 75px
 
 .divider_small
-    display: block
     margin: 10px 0px
     height: 3px
-    width: 300px
-    background-color: $red_color
+    width: 0px
+    background-color: white
+    transition: 0.5s all
 
 @media (max-width: 1439px)
     .explore

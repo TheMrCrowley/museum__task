@@ -63,6 +63,10 @@ html {
   letter-spacing: 5px;
 }
 
+.header__logo object {
+  fill: red;
+}
+
 .header nav {
   max-width: 720px;
 }
@@ -119,6 +123,8 @@ main .welcome {
 }
 
 main .welcome__container {
+  width: 1920px;
+  margin: 0 auto;
   height: 100%;
   background: url("../assets/img/background.jpg") no-repeat;
   background-position: right bottom;
@@ -137,6 +143,7 @@ main .welcome__title {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #fff;
+  line-height: 90px;
   margin-bottom: 26px;
 }
 
@@ -199,6 +206,11 @@ main .visiting .cards .card {
   height: 420px;
   width: 440px;
   margin-bottom: 75px;
+}
+
+main .visiting .cards .card:hover .divider_small {
+  background-color: #710707;
+  width: 300px;
 }
 
 main .visiting .cards .card img {
@@ -622,6 +634,13 @@ main .tickets-content__amount .basic button, main .tickets-content__amount .seni
   border: none;
   outline: none;
   background-color: #030303;
+  -webkit-transition: 0.2s background-color;
+  transition: 0.2s background-color;
+  cursor: pointer;
+}
+
+main .tickets-content__amount .basic button:active, main .tickets-content__amount .senior button:active {
+  background-color: #9D8665;
 }
 
 main .tickets-content__amount .total {
@@ -839,11 +858,12 @@ main .contacts__content .descr img {
 }
 
 .divider_small {
-  display: block;
   margin: 10px 0px;
   height: 3px;
-  width: 300px;
-  background-color: #710707;
+  width: 0px;
+  background-color: white;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 @media (max-width: 1439px) {
