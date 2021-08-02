@@ -491,34 +491,33 @@ main
                 fill: $hover_font
     &__menu
         display: flex
-        align-items: flex-start
+        align-items: flex-start        
         nav
-            display: flex
-            justify-content: space-between
-            // max-width: 370px
-            // max-height: 150px
             .menu
+                min-width: 360px
+                max-height: 150px
                 display: flex
+                flex-direction: column
                 justify-content: space-between
+                align-content: space-between
+                flex-wrap: wrap
                 margin: 0
                 padding: 0
-                margin-right: 150px
                 list-style: none
-                .col
-                    &:first-child
-                        margin-right: 158px              
-                    a
-                        font-family: $roboto_font
-                        font-weight: 200
-                        font-size: 22px
-                        text-decoration: none
-                        color: $light_font
-                        line-height: 50px
-                        letter-spacing: 2px
-                        text-align: center
-                        transition: 0.5s color
-                        &:hover
-                            color: $hover_font
+                &__item
+                             
+                a
+                    font-family: $roboto_font
+                    font-weight: 200
+                    font-size: 22px
+                    text-decoration: none
+                    color: $light_font
+                    line-height: 50px
+                    letter-spacing: 2px
+                    text-align: center
+                    transition: 0.5s color
+                    &:hover
+                        color: $hover_font
     .social
         display: flex
         justify-content: space-between
