@@ -43,16 +43,22 @@ html {
 }
 
 .header__logo {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 195px;
 }
 
-.header__logo img {
+.header__logo svg {
   display: block;
   width: 50px;
   margin-right: 20px;
+  -webkit-transition: 0.5s fill;
+  transition: 0.5s fill;
 }
 
 .header__logo h1 {
@@ -61,10 +67,16 @@ html {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
-.header__logo object {
-  fill: red;
+.header__logo:hover h1 {
+  color: #9D8665;
+}
+
+.header__logo:hover svg {
+  fill: #9D8665;
 }
 
 .header nav {
@@ -118,20 +130,20 @@ html {
 }
 
 main .welcome {
-  padding-top: 115px;
   height: 750px;
 }
 
 main .welcome__container {
-  width: 1920px;
   margin: 0 auto;
+  width: 1900px;
   height: 100%;
   background: url("../assets/img/background.jpg") no-repeat;
-  background-position: right bottom;
+  background-position: calc(100% + 8px) calc(100%);
 }
 
 main .welcome__container .container {
   position: relative;
+  padding-top: 115px;
   height: 100%;
   z-index: 1;
 }
@@ -205,7 +217,7 @@ main .visiting .cards .card {
   display: block;
   height: 420px;
   width: 440px;
-  margin-bottom: 75px;
+  margin-bottom: 80px;
 }
 
 main .visiting .cards .card:hover .divider_small {
@@ -233,9 +245,12 @@ main .visiting .cards .card__descr {
   font-family: "Roboto";
   font-weight: 200;
   font-size: 22px;
+  line-height: 26px;
 }
 
 main .visiting .cards .card__descr span {
+  display: block;
+  margin-top: 10px;
   font-weight: 200;
   font-size: 18px;
 }
@@ -275,8 +290,9 @@ main .explore__descr h3::after {
 }
 
 main .explore__descr p {
+  margin-bottom: 25px;
   font-family: "Roboto";
-  width: 660px;
+  width: 655px;
   font-weight: 300;
   font-size: 22px;
   line-height: 38px;
@@ -284,6 +300,7 @@ main .explore__descr p {
 }
 
 main .explore__descr p span {
+  font-weight: 400;
   color: #9D8665;
 }
 
@@ -358,8 +375,8 @@ main .video__panel .control {
 }
 
 main .video__panel .rewind-bar {
-  background: -webkit-gradient(linear, left top, right top, from(#24809E), color-stop(50%, #24809E), color-stop(40%, #fff), to(#fff));
-  background: linear-gradient(to right, #24809E 0%, #24809E 50%, #fff 40%, #fff 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#24809E), color-stop(47%, #24809E), color-stop(48%, #fff), to(#fff));
+  background: linear-gradient(to right, #24809E 0%, #24809E 47%, #fff 48%, #fff 100%);
   height: 8px;
   outline: none;
   -webkit-transition: background 450ms ease-in;
@@ -369,8 +386,8 @@ main .video__panel .rewind-bar {
 }
 
 main .video__panel .rewind-bar::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   -webkit-appearance: none;
   cursor: ew-resize;
@@ -399,8 +416,8 @@ main .video__panel .sound {
 }
 
 main .video__panel .sound__bar {
-  background: -webkit-gradient(linear, left top, right top, from(#24809E), color-stop(50%, #24809E), color-stop(40%, #fff), to(#fff));
-  background: linear-gradient(to right, #24809E 0%, #24809E 50%, #fff 40%, #fff 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#24809E), color-stop(47%, #24809E), color-stop(48%, #fff), to(#fff));
+  background: linear-gradient(to right, #24809E 0%, #24809E 47%, #fff 48%, #fff 100%);
   height: 8px;
   outline: none;
   -webkit-transition: background 450ms ease-in;
@@ -410,8 +427,8 @@ main .video__panel .sound__bar {
 }
 
 main .video__panel .sound__bar::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   -webkit-appearance: none;
   cursor: ew-resize;
@@ -448,6 +465,9 @@ main .video__descr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .video__descr .title {
@@ -460,6 +480,7 @@ main .video__descr .title {
 }
 
 main .video__descr .text {
+  margin: 0;
   font-family: "Roboto";
   max-width: 720px;
   font-weight: 300;
@@ -504,8 +525,10 @@ main .tickets-content .flex-container {
 }
 
 main .tickets-content h4 {
+  margin: 0;
+  margin-bottom: 50px;
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 28px;
   line-height: 33px;
   color: #fff;
@@ -585,6 +608,8 @@ main .tickets-content__amount {
 }
 
 main .tickets-content__amount h4 {
+  margin: 0;
+  margin-bottom: 10px;
   text-align: right;
 }
 
@@ -597,7 +622,7 @@ main .tickets-content__amount .title {
 }
 
 main .tickets-content__amount .basic {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 main .tickets-content__amount .senior {
@@ -690,7 +715,8 @@ main .contacts__content {
 
 main .contacts__content .descr h4 {
   margin: 0;
-  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-bottom: 37px;
   font-weight: bold;
   font-size: 28px;
 }
@@ -702,7 +728,7 @@ main .contacts__content .descr .contact {
 }
 
 main .contacts__content .descr .contact__item {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   font-weight: 300;
   font-size: 22px;
 }
@@ -727,25 +753,42 @@ main .contacts__content .descr img {
 }
 
 .footer__logo {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 195px;
+  height: 50px;
   margin-right: 145px;
 }
 
-.footer__logo img {
+.footer__logo svg {
   display: block;
   width: 50px;
   margin-right: 20px;
+  -webkit-transition: 0.5s fill;
+  transition: 0.5s fill;
 }
 
-.footer__logo h1 {
+.footer__logo div {
   font-family: "Forum";
   font-size: 28px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
+  -webkit-transition: 0.5s color;
+  transition: 0.5s color;
+}
+
+.footer__logo:hover div {
+  color: #9D8665;
+}
+
+.footer__logo:hover svg {
+  fill: #9D8665;
 }
 
 .footer__menu {
@@ -764,20 +807,12 @@ main .contacts__content .descr img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 370px;
-  max-height: 150px;
 }
 
 .footer__menu nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -787,20 +822,24 @@ main .contacts__content .descr img {
   list-style: none;
 }
 
-.footer__menu nav a {
+.footer__menu nav .menu .col:first-child {
+  margin-right: 158px;
+}
+
+.footer__menu nav .menu .col a {
   font-family: "Roboto";
   font-weight: 200;
   font-size: 22px;
-  line-height: 50px;
   text-decoration: none;
   color: #fff;
+  line-height: 50px;
   letter-spacing: 2px;
   text-align: center;
   -webkit-transition: 0.5s color;
   transition: 0.5s color;
 }
 
-.footer__menu nav a:hover {
+.footer__menu nav .menu .col a:hover {
   color: #9D8665;
 }
 
@@ -813,6 +852,7 @@ main .contacts__content .descr img {
           justify-content: space-between;
   margin: 0;
   padding: 0;
+  margin-bottom: 15px;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -832,6 +872,7 @@ main .contacts__content .descr img {
   margin-right: 25px;
   border: 1px solid #666666;
   border-radius: 50%;
+  cursor: pointer;
   -webkit-transition: 0.5 all;
   transition: 0.5 all;
 }
@@ -847,6 +888,10 @@ main .contacts__content .descr img {
 
 .footer .social__item:hover svg {
   fill: #9D8665;
+}
+
+.footer .social__item:last-child {
+  margin: 0;
 }
 
 .divider_big {

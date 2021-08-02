@@ -11,17 +11,13 @@ $forum_font: 'Forum'
 
 @mixin logo
     display: flex
+    align-items: center
     width: 195px
-    img
+    svg
         display: block
         width: 50px
         margin-right: 20px
-    h1
-        font-family: $forum_font
-        font-size: 28px
-        color: $light_font
-        text-transform: uppercase
-        letter-spacing: 5px
+        transition: 0.5s fill
 
 @mixin white_headres
     margin: 0
@@ -40,15 +36,15 @@ $forum_font: 'Forum'
     color: $hover_font
 
 @mixin bar
-    background: linear-gradient(to right, #24809E 0%, #24809E 50%, #fff 40%, #fff 100%)
+    background: linear-gradient(to right, #24809E 0%, #24809E 47%, #fff 48%, #fff 100%)
     height: 8px
     outline: none
     transition: background 450ms ease-in
     -webkit-appearance: none
 
 @mixin bar-slider
-    width: 20px
-    height: 20px
+    width: 15px
+    height: 15px
     border-radius: 50%
     -webkit-appearance: none
     cursor: ew-resize
@@ -85,7 +81,20 @@ html
         align-items: center
         height: 50px
     &__logo
+        cursor: pointer
         @include logo
+        h1
+            font-family: $forum_font
+            font-size: 28px
+            color: $light_font
+            text-transform: uppercase
+            letter-spacing: 5px
+            transition: 0.5s all
+        &:hover
+            h1
+                color: $hover_font
+            svg
+                fill: $hover_font
     nav
         max-width: 720px
         .menu
@@ -118,16 +127,18 @@ html
 
 main
     .welcome
-        padding-top: 115px
+        // padding-top: 115px
         height: 750px
         &__container
-            width: 1920px
             margin: 0 auto
+            width: 1900px
             height: 100%
             background: url("../assets/img/background.jpg") no-repeat
-            background-position: right bottom
+            // background-position: right bottom
+            background-position: calc(100% + 8px) calc(100%);
             .container
                 position: relative
+                padding-top: 115px
                 height: 100%
                 z-index: 1
         &__title
@@ -169,7 +180,7 @@ main
                 display: block
                 height: 420px
                 width: 440px
-                margin-bottom: 75px
+                margin-bottom: 80px
                 &:hover
                     .divider_small
                         background-color: $red_color
@@ -190,7 +201,10 @@ main
                     font-family: $roboto_font
                     font-weight: 200
                     font-size: 22px
+                    line-height: 26px
                     span
+                        display: block
+                        margin-top: 10px
                         font-weight: 200
                         font-size: 18px
     .explore
@@ -212,13 +226,15 @@ main
                     width: 660px
                     background-color: $red_color
             p
+                margin-bottom: 25px
                 font-family: $roboto_font
-                width: 660px
+                width: 655px
                 font-weight: 300
                 font-size: 22px
                 line-height: 38px
                 color: #fff
                 span
+                    font-weight: 400
                     color: $hover_font
         &__bg
             img
@@ -288,9 +304,11 @@ main
         &__descr
             display: flex
             justify-content: space-between
+            align-items: center
             .title
                 @include gold_headres
             .text
+                margin: 0
                 font-family: $roboto_font
                 max-width: 720px
                 font-weight: 300
@@ -311,9 +329,11 @@ main
                 display: flex
                 justify-content: space-between
                 width: 50%
-            h4                
+            h4          
+                margin: 0
+                margin-bottom: 50px     
                 font-family: $roboto_font 
-                font-weight: bold
+                font-weight: 600
                 font-size: 28px
                 line-height: 33px
                 color: #fff
@@ -365,6 +385,8 @@ main
                 color: #fff
                 margin-bottom: 50px
                 h4
+                    margin: 0
+                    margin-bottom: 10px
                     text-align: right
                 .title
                     align-self: flex-start
@@ -372,7 +394,7 @@ main
                     margin-bottom: 15px
                     font-weight: 300                
                 .basic
-                    margin-bottom: 25px
+                    margin-bottom: 35px
                 .senior
                     margin-bottom: 50px
                 .basic, .senior
@@ -427,7 +449,8 @@ main
             .descr
                 h4
                     margin: 0
-                    margin-bottom: 35px
+                    margin-top: 10px
+                    margin-bottom: 37px
                     font-weight: bold
                     font-size: 28px
                 .contact
@@ -435,9 +458,10 @@ main
                     padding: 0
                     list-style: none
                     &__item
-                        margin-bottom: 20px
+                        margin-bottom: 23px
                         font-weight: 300
                         font-size: 22px
+                        // line-height: 30px
                 img
                     display: block
 
@@ -449,42 +473,58 @@ main
         display: flex
         justify-content: space-between
     &__logo
+        cursor: pointer
         @include logo
+        height: 50px
         margin-right: 145px
+        div
+            font-family: $forum_font
+            font-size: 28px
+            color: $light_font
+            text-transform: uppercase
+            letter-spacing: 5px
+            transition: 0.5s color
+        &:hover
+            div
+                color: $hover_font
+            svg
+                fill: $hover_font
     &__menu
         display: flex
         align-items: flex-start
         nav
             display: flex
             justify-content: space-between
-            max-width: 370px
-            max-height: 150px
+            // max-width: 370px
+            // max-height: 150px
             .menu
                 display: flex
-                flex-direction: column
-                flex-wrap: wrap
                 justify-content: space-between
                 margin: 0
                 padding: 0
                 margin-right: 150px
                 list-style: none
-            a
-                font-family: $roboto_font
-                font-weight: 200
-                font-size: 22px
-                line-height: 50px
-                text-decoration: none
-                color: $light_font
-                letter-spacing: 2px
-                text-align: center
-                transition: 0.5s color
-                &:hover
-                    color: $hover_font
+                .col
+                    &:first-child
+                        margin-right: 158px              
+                    a
+                        font-family: $roboto_font
+                        font-weight: 200
+                        font-size: 22px
+                        text-decoration: none
+                        color: $light_font
+                        line-height: 50px
+                        letter-spacing: 2px
+                        text-align: center
+                        transition: 0.5s color
+                        &:hover
+                            color: $hover_font
     .social
         display: flex
         justify-content: space-between
         margin: 0
         padding: 0
+        margin-bottom: 15px
         align-self: flex-end
         &__item
             display: flex
@@ -495,6 +535,7 @@ main
             margin-right: 25px
             border: 1px solid #666666
             border-radius: 50%
+            cursor: pointer
             transition: 0.5 all
             svg
                 transition: 0.5s all
@@ -502,7 +543,8 @@ main
                 border: 1px solid $hover_font
                 svg
                     fill: $hover_font
-            
+            &:last-child
+                margin: 0
     
 .divider_big
     display: block
